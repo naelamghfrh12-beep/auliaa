@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>The Nurse Has Graduated! 🎓</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- FLOATING DECORATION -->
+
+    <div class="floating-decor" aria-hidden="true">
+        <span class="decor decor-1">🩹</span>
+        <span class="decor decor-2">💊</span>
+        <span class="decor decor-3">🩺</span>
+        <span class="decor decor-4">✦</span>
+        <span class="decor decor-5">♡</span>
+        <span class="decor decor-6">🩹</span>
+    </div>
+
+
+    <!-- CONFETTI -->
+
+    <div
+        class="confetti-container"
+        id="confettiContainer"
+        aria-hidden="true"
+    ></div>
+
+
+    <!-- =====================================
+         1. OPENING
+    ====================================== -->
+
+    <section class="screen active" id="opening">
+
+        <div class="card">
+
+            <div class="nurse-scene opening-nurse">
+
+                <div class="nurse-sparkle sparkle-one">✦</div>
+                <div class="nurse-sparkle sparkle-two">♡</div>
+
+                <div class="nurse-character">
+                    <div class="nurse-cap">✚</div>
+                    <div class="nurse-face">👩🏻‍⚕️</div>
+                </div>
+
+                <div class="medical-item item-one">🩺</div>
+                <div class="medical-item item-two">💊</div>
+
+            </div>
+
+            <p class="small-text">
+                SPECIAL ANNOUNCEMENT
+            </p>
+
+            <h1>
+                Nurse<br>
+                <span>Graduation!</span>
+            </h1>
+
+            <p class="description opening-description">
+                permisi, mau lapor dulu 🩺<br>
+                ada calon perawat yang udah waktunya naik level!
+            </p>
+
+            <div class="loading-card">
+
+                <div class="loading-top">
+                    <span>graduation_status.exe</span>
+                    <span>● ● ●</span>
+                </div>
+
+                <p>
+                    Checking graduation status...
+                </p>
+
+                <div class="loading-track">
+                    <div class="loading-progress"></div>
+                </div>
+
+                <p class="loading-result">
+                    Status: <strong>BERHASIL LULUS! 🎓</strong>
+                </p>
+
+            </div>
+
+            <p class="mini-text">
+                Status mahasiswa: selesai.
+                Status mencari cuan: segera dimulai. 💸🩺
+            </p>
+
+            <button
+                class="main-button"
+                onclick="goTo('checkup')"
+            >
+                CEK KONDISI PASIEN 🩺 →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         2. PEMERIKSAAN PASIEN
+    ====================================== -->
+
+    <section class="screen" id="checkup">
+
+        <div class="card">
+
+            <div class="emoji-big medical-bounce">
+                🚑
+            </div>
+
+            <p class="small-text">
+                EMERGENCY CHECKUP
+            </p>
+
+            <h2>
+                Pemeriksaan<br>
+                <span>Pasien</span>
+            </h2>
+
+            <p class="description">
+                Mohon tenang, kami sedang melakukan
+                pemeriksaan terhadap lulusan yang satu ini.
+            </p>
+
+            <div class="medical-record">
+
+                <div class="record-header">
+                    <span>📋 HASIL PEMERIKSAAN</span>
+                    <span class="record-status">COMPLETED</span>
+                </div>
+
+                <div class="record-row">
+                    <span>Nama pasien</span>
+                    <strong>Fidya Aulia Rachma</strong>
+                </div>
+
+                <div class="record-row">
+                    <span>Status</span>
+                    <strong>Lulus D3 Keperawatan 🎓</strong>
+                </div>
+
+                <div class="record-row">
+                    <span>Kondisi</span>
+                    <strong>Terlalu bahagia</strong>
+                </div>
+
+                <div class="record-row">
+                    <span>Tekanan darah</span>
+                    <strong>Stabil (semoga)</strong>
+                </div>
+
+                <div class="record-row">
+                    <span>Mental</span>
+                    <strong>Lulus setelah banyak drama</strong>
+                </div>
+
+                <div class="record-row">
+                    <span>Status toga</span>
+                    <strong>BERHASIL DIAMANKAN</strong>
+                </div>
+
+            </div>
+
+            <div class="doctor-note">
+
+                <div class="note-icon">🩺</div>
+
+                <div>
+                    <strong>KESIMPULAN DOKTER</strong>
+
+                    <p>
+                        Pasien dinyatakan sehat dan resmi
+                        menjadi lulusan D3 Keperawatan.
+                    </p>
+
+                    <p>
+                        Namun, pasien disarankan menikmati
+                        momen kelulusan sebelum kembali menghadapi
+                        kenyataan hidup.
+                    </p>
+                </div>
+
+            </div>
+
+            <button
+                class="main-button"
+                onclick="goTo('laboratory')"
+            >
+                LANJUT KE HASIL LABORATORIUM →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         3. HASIL LABORATORIUM
+    ====================================== -->
+
+    <section class="screen" id="laboratory">
+
+        <div class="card">
+
+            <div class="lab-animation">
+
+                <span class="lab-item lab-one">💊</span>
+                <span class="lab-item lab-two">🩹</span>
+                <span class="lab-item lab-three">💉</span>
+                <span class="lab-item lab-four">🩺</span>
+
+                <div class="lab-board">
+                    🧪
+                </div>
+
+            </div>
+
+            <p class="small-text">
+                LABORATORY REPORT
+            </p>
+
+            <h2>
+                Hasil Lab<br>
+                <span>Kelulusan</span>
+            </h2>
+
+            <p class="description">
+                Setelah dilakukan pemeriksaan menyeluruh,
+                berikut hasil laboratorium perjalanan kuliah
+                yang berhasil dilewati.
+            </p>
+
+            <div class="lab-results">
+
+                <div class="lab-result">
+                    <span class="lab-icon">🌙</span>
+
+                    <div>
+                        <strong>Begadang</strong>
+                        <p>Efek samping perjalanan perkuliahan😭</p>
+                    </div>
+
+                    <span class="result-badge">POS</span>
+                </div>
+
+                <div class="lab-result">
+                    <span class="lab-icon">📚</span>
+
+                    <div>
+                        <strong>Drama laporan</strong>
+                        <p>Berhasil dilewati satu per satu</p>
+                    </div>
+
+                    <span class="result-badge">POS</span>
+                </div>
+
+                <div class="lab-result">
+                    <span class="lab-icon">🩺</span>
+
+                    <div>
+                        <strong>Praktik keperawatan</strong>
+                        <p>Berhasil diselesaikan</p>
+                    </div>
+
+                    <span class="result-badge normal">OK</span>
+                </div>
+
+                <div class="lab-result">
+                    <span class="lab-icon">🧠</span>
+
+                    <div>
+                        <strong>Kesabaran menghadapi kuliah</strong>
+                        <p>Teruji selama masa perkuliahan</p>
+                    </div>
+
+                    <span class="result-badge normal">OK</span>
+                </div>
+
+                <div class="lab-result">
+                    <span class="lab-icon">🎓</span>
+
+                    <div>
+                        <strong>Status mahasiswa</strong>
+                        <p>Misi pendidikan berhasil diselesaikan</p>
+                    </div>
+
+                    <span class="result-badge">DONE</span>
+                </div>
+
+                <div class="lab-result">
+                    <span class="lab-icon">🎉</span>
+
+                    <div>
+                        <strong>Status lulusan</strong>
+                        <p>RESMI LULUS!</p>
+                    </div>
+
+                    <span class="result-badge normal">PASS</span>
+                </div>
+
+            </div>
+
+            <p class="disclaimer">
+                *Hasil pemeriksaan ini hanya untuk hiburan,
+                bukan diagnosis medis beneran wkwk
+            </p>
+
+            <button
+                class="main-button"
+                onclick="goTo('graduation')"
+            >
+                LIHAT UPACARA KELULUSAN 🎓 →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         4. GRADUATION CEREMONY
+    ====================================== -->
+
+    <section class="screen graduation-screen" id="graduation">
+
+        <div class="card">
+
+            <div class="graduation-scene">
+
+                <div class="graduation-star star-one">✦</div>
+                <div class="graduation-star star-two">✧</div>
+                <div class="graduation-star star-three">♡</div>
+
+                <div class="diploma diploma-one">📜</div>
+
+                <div class="graduate-character">
+                    <div class="graduate-cap">
+                        <span></span>
+                    </div>
+
+                    <div class="graduate-face">
+                        👩🏻‍⚕️
+                    </div>
+
+                    <div class="graduate-gown">
+                        🎓
+                    </div>
+                </div>
+
+                <div class="flower flower-one">🌸</div>
+                <div class="flower flower-two">🌷</div>
+
+            </div>
+
+            <p class="small-text">
+                THE BIG DAY IS HERE
+            </p>
+
+            <h1 class="graduation-title">
+                FINALLY,<br>
+                <span>YOU MADE IT!</span>
+            </h1>
+
+            <div class="congrats-label">
+                🎓 SELAMAT WISUDA 🎓
+            </div>
+
+            <p class="description">
+                Akhirnya kelar juga perjalanan D3 Keperawatan!🎉
+            </p>
+
+            <div class="graduation-message">
+
+                <p>
+                    Setelah sekian banyak tugas, praktik, dan segala
+                    drama perkuliahan, akhirnya sampai juga di titik ini.
+                </p>
+
+                <p>
+                    Plot twist-nya, yang biasanya belajar cara merawat
+                    pasien, sekarang waktunya merayakan pencapaian diri
+                    sendiri.
+                </p>
+
+            </div>
+
+            <div class="achievement-stamp">
+                <span>OFFICIALLY</span>
+                <strong>GRADUATED!</strong>
+                <span>D3 KEPERAWATAN</span>
+            </div>
+
+            <button
+                class="main-button"
+                onclick="goTo('gallery')"
+            >
+                ADA FOTO SPESIAL NIH 📸 →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         5. GRADUATION GALLERY
+    ====================================== -->
+
+    <section class="screen" id="gallery">
+
+        <div class="card">
+
+            <div class="emoji-big camera-bounce">
+                📸
+            </div>
+
+            <p class="small-text">
+                A LITTLE MEMORY
+            </p>
+
+            <h2>
+                Graduation<br>
+                <span>Gallery</span>
+            </h2>
+
+            <p class="description">
+                Satu foto, satu pencapaian,
+                dan banyak cerita di baliknya.
+            </p>
+
+            <div class="polaroid">
+
+                <div class="photo-frame">
+
+                    <!--
+                    GANTI foto-wisuda.jpg
+                    DENGAN FOTO ASLI KAKAK KELASMU
+                    -->
+
+                    <img
+                        src="foto-wisuda.jpeg"
+                        alt="Foto wisuda"
+                        class="graduation-photo"
+                        onerror="this.style.display='none'; document.getElementById('photoPlaceholder').style.display='flex';"
+                    >
+
+                    <div
+                        class="photo-placeholder"
+                        id="photoPlaceholder"
+                    >
+                        <span class="placeholder-icon">📷</span>
+
+                        <strong>YOUR GRADUATION PHOTO</strong>
+
+                        <p>
+                            Satu foto spesial di sini.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="polaroid-caption">
+                    <span>the graduation era 🎓</span>
+                    <span>♡</span>
+                </div>
+
+            </div>
+
+            <p class="photo-quote">
+                "one picture, one achievement,
+                a thousand little stories."
+            </p>
+
+            <p class="mini-text">
+                Sebuah pencapaian yang pantas dirayakan,
+                sekecil atau sebesar apa pun prosesnya.
+            </p>
+
+            <button
+                class="main-button"
+                onclick="goTo('message')"
+            >
+                BACA PESAN TERAKHIR 💌 →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         6. PESAN PENUTUP
+    ====================================== -->
+
+    <section class="screen final-screen" id="message">
+
+        <div class="card">
+
+            <div class="final-decoration">
+
+                <span class="final-flower flower-left">🌷</span>
+
+                <div class="final-envelope">
+                    💌
+                </div>
+
+                <span class="final-flower flower-right">🌸</span>
+
+            </div>
+
+            <p class="small-text">
+                A LITTLE MESSAGE FOR YOU
+            </p>
+
+            <h2>
+                Once Again,<br>
+                <span>Congratulations!</span>
+            </h2>
+
+            <div class="letter-card">
+
+                <div class="letter-top">
+                    <span>dear, Fidya Auliaa</span>
+                    <span>♡</span>
+                </div>
+
+                <div class="letter-content">
+
+                    <p>
+                        HEYYY, SEKALI LAGI SELAMAT WISUDAAA! 🎓💗
+                    </p>
+
+                    <p>
+                        Semoga setelah ini makin banyak kabar baik 
+                        yang datang, urusannya dilancarkan, rezekinya 
+                        dilancarkan, dan semua rencana baiknya satu
+                        per satu bisa terwujud.
+                    </p>
+
+                    <p>
+                        Semoga ilmu yang udah didapat bisa bermanfaat, 
+                        bisa jadi perawat yang hebat, selalu diberi
+                        kesehatan saat merawat orang lain, dan 
+                        langkah selanjutnya membawa banyak kesempatan baik 🩺🤍
+                    </p>
+
+                    <p>
+                        Selamat dan semangat buat chapter kehidupan yang baru!
+                        Semoga sukses selalu dan jangan lupa bahagia juga 
+                        di tengah sibuknya nanti. ✨
+                    </p>
+
+                    <div class="ps-note">
+                        <strong></strong>
+
+                        Oke, sekian laporan dari website ini. 
+                        Terima kasih sudah mengikuti rangkaian 
+                        pemeriksaan sampai akhir. Pasien dinyatakan 
+                        lulus dan website resmi ditutup. 🫡
+                    </div>
+
+                </div>
+
+                <div class="letter-signature">
+                    with love & good wishes ♡
+                </div>
+
+            </div>
+
+            <div class="final-wishes">
+
+                <span>🩺</span>
+                <span>🎓</span>
+                <span>🌷</span>
+                <span>💗</span>
+                <span>💊</span>
+
+            </div>
+
+            <p class="footer-note">
+                MADE WITH 💗 & A LITTLE BIT OF MEDICAL HUMOR
+            </p>
+
+            <button
+                class="restart-button"
+                onclick="restartWebsite()"
+            >
+                ULANGI PEMERIKSAAN 🔄
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

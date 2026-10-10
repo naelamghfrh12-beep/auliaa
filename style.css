@@ -1,0 +1,1746 @@
+/* =========================================
+   NURSE GRADUATION WEBSITE
+   PASTEL NURSING AESTHETIC
+========================================= */
+
+:root {
+    --cream: #fff8f1;
+    --cream-dark: #fff0e5;
+
+    --pink: #f7d9d8;
+    --pink-light: #fff0f0;
+    --pink-dark: #e9a6a7;
+
+    --peach: #f4b8a0;
+    --coral: #ef8c78;
+
+    --brown: #59463f;
+    --brown-light: #8b746a;
+
+    --white: #ffffff;
+    --green: #a6c5ae;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+
+    background: var(--cream);
+    color: var(--brown);
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   GLOBAL DECORATION
+========================================= */
+
+.floating-decor {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+.decor {
+    position: absolute;
+
+    opacity: 0.6;
+
+    animation: floatDecor 6s ease-in-out infinite;
+}
+
+.decor-1 {
+    left: 5%;
+    top: 20%;
+
+    font-size: 28px;
+
+    animation-delay: 0s;
+}
+
+.decor-2 {
+    right: 7%;
+    top: 35%;
+
+    font-size: 25px;
+
+    animation-delay: 1s;
+}
+
+.decor-3 {
+    left: 8%;
+    bottom: 15%;
+
+    font-size: 35px;
+
+    animation-delay: 2s;
+}
+
+.decor-4 {
+    right: 12%;
+    top: 12%;
+
+    font-size: 25px;
+
+    color: var(--coral);
+
+    animation-delay: 1.5s;
+}
+
+.decor-5 {
+    right: 8%;
+    bottom: 18%;
+
+    font-size: 32px;
+
+    color: var(--pink-dark);
+
+    animation-delay: 2.5s;
+}
+
+.decor-6 {
+    left: 45%;
+    top: 8%;
+
+    font-size: 20px;
+
+    animation-delay: 3s;
+}
+
+@keyframes floatDecor {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-8deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(8deg);
+    }
+}
+
+
+/* =========================================
+   SCREEN
+========================================= */
+
+.screen {
+    display: none;
+
+    min-height: 100vh;
+    width: 100%;
+
+    padding: 55px 22px;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+    isolation: isolate;
+
+    overflow: hidden;
+}
+
+.screen.active {
+    display: flex;
+
+    animation: screenEnter 0.65s ease both;
+}
+
+@keyframes screenEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+    width: 100%;
+    max-width: 490px;
+
+    padding: 30px 20px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+
+h1,
+h2,
+h3 {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: clamp(48px, 12vw, 75px);
+
+    line-height: 0.98;
+
+    margin-bottom: 25px;
+
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: clamp(39px, 10vw, 61px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+h1 span,
+h2 span {
+    color: var(--coral);
+}
+
+.small-text {
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    color: #c87972;
+
+    margin-bottom: 22px;
+}
+
+.description {
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    color: #806f68;
+
+    max-width: 410px;
+
+    margin: 0 auto 27px;
+}
+
+.mini-text {
+    color: #9b8780;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin: 23px auto;
+}
+
+.emoji-big {
+    font-size: 70px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.main-button {
+    display: inline-block;
+
+    border: none;
+
+    background: var(--coral);
+
+    color: white;
+
+    padding: 15px 25px;
+
+    border-radius: 50px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 10px 25px rgba(239, 140, 120, 0.22);
+}
+
+.main-button:hover {
+    transform: translateY(-4px) scale(1.02);
+
+    box-shadow:
+        0 15px 30px rgba(239, 140, 120, 0.3);
+}
+
+.main-button:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================================
+   OPENING BACKGROUND
+========================================= */
+
+#opening {
+    background:
+        radial-gradient(
+            circle at 50% 10%,
+            #fffdf9,
+            #fff2e8 65%,
+            #ffe6df
+        );
+}
+
+
+/* =========================================
+   NURSE CHARACTER
+========================================= */
+
+.nurse-scene {
+    height: 190px;
+
+    max-width: 330px;
+
+    margin: 0 auto 15px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.nurse-character {
+    position: relative;
+
+    animation: nurseFloat 2.5s ease-in-out infinite;
+
+    z-index: 2;
+}
+
+.nurse-face {
+    font-size: 105px;
+
+    line-height: 1;
+}
+
+.nurse-cap {
+    position: absolute;
+
+    top: -10px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 45px;
+    height: 19px;
+
+    background: white;
+
+    border: 2px solid #f0c7c6;
+
+    border-radius: 8px 8px 4px 4px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #ef8c78;
+
+    font-size: 12px;
+
+    z-index: 3;
+}
+
+@keyframes nurseFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(2deg);
+    }
+}
+
+.nurse-sparkle {
+    position: absolute;
+
+    color: var(--coral);
+
+    font-size: 30px;
+
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+.sparkle-one {
+    top: 20px;
+    left: 30px;
+}
+
+.sparkle-two {
+    right: 30px;
+    top: 50px;
+
+    animation-delay: 1s;
+}
+
+@keyframes sparkle {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: scale(0.8) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2) rotate(20deg);
+    }
+}
+
+.medical-item {
+    position: absolute;
+
+    font-size: 34px;
+
+    animation: medicalFloat 3s ease-in-out infinite;
+}
+
+.item-one {
+    bottom: 15px;
+    left: 20px;
+}
+
+.item-two {
+    top: 25px;
+    right: 25px;
+
+    animation-delay: 1s;
+}
+
+@keyframes medicalFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-8deg);
+    }
+
+    50% {
+        transform: translateY(-13px) rotate(8deg);
+    }
+}
+
+
+/* =========================================
+   LOADING CARD
+========================================= */
+
+.loading-card {
+    background: rgba(255, 255, 255, 0.8);
+
+    border: 1px solid #f2ded5;
+
+    border-radius: 20px;
+
+    padding: 18px;
+
+    margin: 25px auto;
+
+    text-align: left;
+
+    box-shadow:
+        0 10px 30px rgba(100, 70, 55, 0.05);
+}
+
+.loading-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    color: #b78c7e;
+
+    font-size: 10px;
+
+    margin-bottom: 17px;
+}
+
+.loading-card p {
+    font-size: 12px;
+
+    color: #8b7770;
+
+    margin-bottom: 12px;
+}
+
+.loading-track {
+    width: 100%;
+
+    height: 9px;
+
+    background: #f6e6e0;
+
+    border-radius: 50px;
+
+    overflow: hidden;
+
+    margin-bottom: 16px;
+}
+
+.loading-progress {
+    width: 100%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f5b8a8,
+            #ef8c78
+        );
+
+    border-radius: 50px;
+
+    animation: loading 2s ease-out both;
+}
+
+@keyframes loading {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.loading-card .loading-result {
+    margin-bottom: 0;
+}
+
+.loading-result strong {
+    color: #dc7966;
+}
+
+
+/* =========================================
+   CHECKUP
+========================================= */
+
+#checkup {
+    background:
+        linear-gradient(
+            135deg,
+            #fff8f1,
+            #ffe8e0
+        );
+}
+
+.medical-bounce {
+    animation: medicalBounce 2s ease-in-out infinite;
+}
+
+@keyframes medicalBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.medical-record {
+    background: #fffdfb;
+
+    border: 1px solid #f0d8d0;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    text-align: left;
+
+    margin: 30px auto;
+
+    box-shadow:
+        0 12px 30px rgba(100, 60, 40, 0.06);
+}
+
+.record-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    color: #ba7b6a;
+
+    padding-bottom: 15px;
+
+    margin-bottom: 5px;
+
+    border-bottom: 1px dashed #ecd6ce;
+}
+
+.record-status {
+    background: #e8f2e9;
+
+    color: #648b6d;
+
+    padding: 5px 8px;
+
+    border-radius: 50px;
+
+    font-size: 9px;
+}
+
+.record-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #f6eeea;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+.record-row:last-child {
+    border-bottom: none;
+}
+
+.record-row span {
+    color: #907c73;
+
+    flex: 1;
+}
+
+.record-row strong {
+    color: #5c4941;
+
+    flex: 1;
+
+    text-align: right;
+}
+
+.doctor-note {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    text-align: left;
+
+    background: #fff0e7;
+
+    border: 1px solid #f4d6c8;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    margin: 25px auto;
+}
+
+.note-icon {
+    font-size: 30px;
+
+    animation: medicalFloat 3s ease-in-out infinite;
+}
+
+.doctor-note strong {
+    display: block;
+
+    font-family: "Fredoka", sans-serif;
+
+    color: #d77d69;
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+}
+
+.doctor-note p {
+    color: #826e64;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    margin-bottom: 10px;
+}
+
+.doctor-note p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   LABORATORY
+========================================= */
+
+#laboratory {
+    background:
+        radial-gradient(
+            circle at top,
+            #fffaf5,
+            #ffece5
+        );
+}
+
+.lab-animation {
+    height: 110px;
+
+    max-width: 300px;
+
+    margin: 0 auto 15px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.lab-board {
+    font-size: 65px;
+
+    animation: nurseFloat 2.5s ease-in-out infinite;
+}
+
+.lab-item {
+    position: absolute;
+
+    font-size: 30px;
+
+    animation: medicalFloat 3s ease-in-out infinite;
+}
+
+.lab-one {
+    left: 10px;
+    top: 10px;
+}
+
+.lab-two {
+    right: 15px;
+    top: 0;
+
+    animation-delay: 0.7s;
+}
+
+.lab-three {
+    left: 35px;
+    bottom: 0;
+
+    animation-delay: 1.4s;
+}
+
+.lab-four {
+    right: 25px;
+    bottom: 0;
+
+    animation-delay: 0.5s;
+}
+
+.lab-results {
+    margin: 30px auto;
+
+    text-align: left;
+}
+
+.lab-result {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background: white;
+
+    border: 1px solid #f1e1db;
+
+    border-radius: 16px;
+
+    padding: 15px;
+
+    margin-bottom: 12px;
+
+    box-shadow:
+        0 5px 15px rgba(80, 50, 30, 0.035);
+
+    transition: transform 0.25s;
+}
+
+.lab-result:hover {
+    transform: translateX(4px);
+}
+
+.lab-icon {
+    font-size: 27px;
+}
+
+.lab-result div {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.lab-result strong {
+    display: block;
+
+    color: #5b4840;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+.lab-result p {
+    color: #9a8278;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+
+    margin-top: 4px;
+}
+
+.result-badge {
+    background: #ffe4dc;
+
+    color: #d77965;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    border-radius: 8px;
+
+    padding: 6px;
+}
+
+.result-badge.normal {
+    background: #e6f1e7;
+
+    color: #668a6d;
+}
+
+.disclaimer {
+    color: #a28d83;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+    margin: 20px auto;
+}
+
+
+/* =========================================
+   GRADUATION
+========================================= */
+
+.graduation-screen {
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            #fffaf5,
+            #ffe8d8 55%,
+            #f9d8d3
+        );
+}
+
+.graduation-scene {
+    height: 230px;
+
+    max-width: 350px;
+
+    margin: 0 auto 20px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.graduate-character {
+    position: relative;
+
+    animation: graduateFloat 2.5s ease-in-out infinite;
+
+    z-index: 2;
+}
+
+.graduate-face {
+    font-size: 120px;
+
+    line-height: 1;
+}
+
+.graduate-cap {
+    position: absolute;
+
+    z-index: 3;
+
+    top: -10px;
+    left: 50%;
+
+    width: 65px;
+    height: 24px;
+
+    transform: translateX(-50%) rotate(-5deg);
+
+    background: #6c5c83;
+
+    border-radius: 5px;
+
+    border: 2px solid #59476f;
+
+    box-shadow:
+        0 5px 0 rgba(80, 60, 100, 0.12);
+}
+
+.graduate-cap::before {
+    content: "";
+
+    position: absolute;
+
+    left: -8px;
+    top: 7px;
+
+    width: 77px;
+    height: 12px;
+
+    background: #8d7aa8;
+
+    border-radius: 4px;
+
+    transform: skewY(-10deg);
+}
+
+.graduate-cap span {
+    position: absolute;
+
+    top: 12px;
+    right: 0;
+
+    width: 3px;
+    height: 22px;
+
+    background: #e5b65f;
+
+    transform: rotate(-5deg);
+}
+
+.graduate-gown {
+    position: absolute;
+
+    bottom: -18px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 32px;
+}
+
+@keyframes graduateFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(2deg);
+    }
+}
+
+.graduation-star {
+    position: absolute;
+
+    font-size: 35px;
+
+    color: #e9a16f;
+
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+.star-one {
+    top: 25px;
+    left: 30px;
+}
+
+.star-two {
+    top: 45px;
+    right: 30px;
+
+    animation-delay: 0.7s;
+}
+
+.star-three {
+    bottom: 20px;
+    left: 55px;
+
+    animation-delay: 1.3s;
+}
+
+.diploma {
+    position: absolute;
+
+    right: 35px;
+    bottom: 25px;
+
+    font-size: 38px;
+
+    transform: rotate(12deg);
+
+    animation: medicalFloat 3s ease-in-out infinite;
+}
+
+.flower {
+    position: absolute;
+
+    font-size: 35px;
+
+    animation: flowerFloat 3s ease-in-out infinite;
+}
+
+.flower-one {
+    left: 15px;
+    bottom: 15px;
+}
+
+.flower-two {
+    right: 10px;
+    top: 15px;
+
+    animation-delay: 1s;
+}
+
+@keyframes flowerFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-8deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(8deg);
+    }
+}
+
+.graduation-title {
+    font-size: clamp(42px, 11vw, 66px);
+
+    color: #59463f;
+}
+
+.graduation-title span {
+    color: #e97e70;
+}
+
+.congrats-label {
+    display: inline-block;
+
+    background: white;
+
+    color: #d77d69;
+
+    border: 1px solid #f3d1c6;
+
+    border-radius: 50px;
+
+    padding: 12px 18px;
+
+    margin: 0 auto 25px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 8px 20px rgba(100, 60, 40, 0.05);
+}
+
+.graduation-message {
+    background: rgba(255, 255, 255, 0.55);
+
+    border-radius: 22px;
+
+    padding: 22px;
+
+    margin: 25px auto;
+
+    color: #7d6a61;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+.graduation-message p {
+    margin-bottom: 15px;
+}
+
+.graduation-message p:last-child {
+    margin-bottom: 0;
+}
+
+.achievement-stamp {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+
+    width: 145px;
+    height: 145px;
+
+    justify-content: center;
+
+    border: 3px double #e88d7a;
+
+    border-radius: 50%;
+
+    margin: 25px auto 35px;
+
+    color: #d67b69;
+
+    transform: rotate(-8deg);
+
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.achievement-stamp span {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+}
+
+.achievement-stamp strong {
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 21px;
+}
+
+
+/* =========================================
+   CONFETTI
+========================================= */
+
+.confetti-container {
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 20;
+}
+
+.confetti-piece {
+    position: absolute;
+
+    top: -20px;
+
+    animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+
+    0% {
+        transform: translateY(-20px) rotate(0deg);
+
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   GALLERY
+========================================= */
+
+#gallery {
+    background:
+        radial-gradient(
+            circle at top,
+            #fffaf5,
+            #fff0e7
+        );
+}
+
+.camera-bounce {
+    animation: cameraBounce 2s ease-in-out infinite;
+}
+
+@keyframes cameraBounce {
+
+    0%,
+    100% {
+        transform: rotate(-5deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(5deg) translateY(-8px);
+    }
+}
+
+.polaroid {
+    width: 100%;
+
+    max-width: 330px;
+
+    margin: 30px auto;
+
+    padding: 12px 12px 20px;
+
+    background: white;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 15px 40px rgba(90, 60, 45, 0.12);
+
+    transform: rotate(-2deg);
+
+    transition: transform 0.4s;
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.photo-frame {
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f9e5df,
+            #fff1e8
+        );
+
+    overflow: hidden;
+
+    position: relative;
+
+    border-radius: 3px;
+}
+
+.graduation-photo {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    animation: photoReveal 1s ease both;
+}
+
+@keyframes photoReveal {
+
+    from {
+        opacity: 0;
+
+        transform: scale(1.06);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+}
+
+.photo-placeholder {
+    display: none;
+
+    position: absolute;
+
+    inset: 0;
+
+    padding: 20px;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #a47d70;
+
+    text-align: center;
+}
+
+.placeholder-icon {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+
+    animation: cameraBounce 2s ease-in-out infinite;
+}
+
+.photo-placeholder strong {
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+}
+
+.photo-placeholder p {
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+.polaroid-caption {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 5px 0;
+
+    color: #9a7b6f;
+
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 15px;
+}
+
+.photo-quote {
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 19px;
+
+    color: #a57d70;
+
+    line-height: 1.7;
+
+    margin: 25px auto;
+}
+
+
+/* =========================================
+   FINAL MESSAGE
+========================================= */
+
+.final-screen {
+    background:
+        radial-gradient(
+            circle at 50% 10%,
+            #fffdf8,
+            #fff1e8 65%,
+            #f9dedb
+        );
+}
+
+.final-decoration {
+    height: 125px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 10px;
+}
+
+.final-envelope {
+    font-size: 70px;
+
+    animation: envelopeFloat 2s ease-in-out infinite;
+}
+
+@keyframes envelopeFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+}
+
+.final-flower {
+    position: absolute;
+
+    font-size: 40px;
+
+    animation: flowerFloat 3s ease-in-out infinite;
+}
+
+.flower-left {
+    left: 20%;
+
+    transform: rotate(-15deg);
+}
+
+.flower-right {
+    right: 20%;
+
+    animation-delay: 1s;
+}
+
+.letter-card {
+    background: rgba(255, 255, 255, 0.88);
+
+    border: 1px solid #f0ddd5;
+
+    border-radius: 20px;
+
+    padding: 22px;
+
+    text-align: left;
+
+    margin: 30px auto;
+
+    box-shadow:
+        0 15px 35px rgba(100, 60, 40, 0.06);
+}
+
+.letter-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px dashed #e8cfc4;
+
+    margin-bottom: 20px;
+
+    color: #c17f70;
+
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 14px;
+}
+
+.letter-content {
+    font-size: 12px;
+
+    line-height: 1.95;
+
+    color: #79665e;
+}
+
+.letter-content p {
+    margin-bottom: 16px;
+}
+
+.letter-content p:first-child {
+    color: #d77969;
+
+    font-weight: 700;
+}
+
+.ps-note {
+    background: #fff0e9;
+
+    border-left: 3px solid #ef9b87;
+
+    border-radius: 0 12px 12px 0;
+
+    padding: 15px;
+
+    margin-top: 20px;
+
+    color: #8d6d60;
+
+    font-size: 11px;
+
+    line-height: 1.9;
+}
+
+.ps-note strong {
+    color: #d77969;
+}
+
+.letter-signature {
+    text-align: right;
+
+    color: #c17f70;
+
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 13px;
+
+    margin-top: 25px;
+}
+
+.final-wishes {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    margin: 30px auto;
+
+    font-size: 25px;
+}
+
+.final-wishes span {
+    animation: wishFloat 2s ease-in-out infinite;
+}
+
+.final-wishes span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.final-wishes span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.final-wishes span:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.final-wishes span:nth-child(5) {
+    animation-delay: 1.2s;
+}
+
+@keyframes wishFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.footer-note {
+    color: #b08b7e;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    line-height: 1.8;
+
+    margin: 30px auto;
+}
+
+.restart-button {
+    padding: 12px 22px;
+
+    border-radius: 50px;
+
+    background: transparent;
+
+    border: 1px solid #e5b8ac;
+
+    color: #b5796b;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.restart-button:hover {
+    background: #fff0e9;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .screen {
+        padding: 35px 15px;
+    }
+
+    .card {
+        padding: 25px 10px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .nurse-face {
+        font-size: 95px;
+    }
+
+    .graduate-face {
+        font-size: 105px;
+    }
+
+    .record-row {
+        font-size: 10px;
+
+        gap: 10px;
+    }
+
+    .record-row strong {
+        max-width: 55%;
+    }
+
+    .medical-record {
+        padding: 15px;
+    }
+
+    .doctor-note {
+        padding: 15px;
+    }
+
+    .lab-result {
+        padding: 12px;
+
+        gap: 9px;
+    }
+
+    .lab-result strong {
+        font-size: 10px;
+    }
+
+    .lab-result p {
+        font-size: 9px;
+    }
+
+    .main-button {
+        max-width: 100%;
+
+        padding: 14px 19px;
+
+        font-size: 11px;
+    }
+
+    .letter-card {
+        padding: 17px;
+    }
+
+    .flower-left {
+        left: 10%;
+    }
+
+    .flower-right {
+        right: 10%;
+    }
+
+    .final-wishes {
+        gap: 12px;
+    }
+
+}
+
+
+/* =========================================
+   REDUCE MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+    }
+
+}
